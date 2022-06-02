@@ -4,7 +4,7 @@ import { HttpTransportType } from "@microsoft/signalr";
 class SignalRConnection {
   connect() {
     return new HubConnectionBuilder()
-      .withUrl("https://localhost:44379/Service", {
+      .withUrl("{localhost}", {
         skipNegotiation: true,
         transport: HttpTransportType.WebSockets,
       })
